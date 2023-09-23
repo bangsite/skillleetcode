@@ -39,12 +39,20 @@ const chunk = function (arr, size) {
         result.push(tmp);
     }
 
-
     console.log(result);
 
     return result;
 };
 
+/**
+ * @param {Array} arr
+ * @param {Function} fn
+ * @return {Array}
+ */
+const sortBy = function (arr, fn) {
+    console.log(arr.sort((i, j) => fn(i) - fn(j)));
+    return arr.sort((i, j) => fn(i) - fn(j));
+};
 
 const fn = (x) => x * 2
 const args = [4], t = 35, cancelT = 190
@@ -56,7 +64,9 @@ const args = [4], t = 35, cancelT = 190
 // chunk
 const arr = [1, 9, 6, 3, 2], size = 6;
 chunk(arr, size);
-
-
-
-
+const arrSort = [5, 4, 1, 2, 3], fnSort = (x) => x;
+const arrSort1 = [{"x": 1}, {"x": 0}, {"x": -1}], fnSort1 = (d) => d.x;
+const arrSort2 = [[3, 4], [5, 2], [10, 1]], fnSort2 = (x) => x[1]
+sortBy(arrSort, fnSort);
+sortBy(arrSort1, fnSort1);
+sortBy(arrSort2, fnSort2);
