@@ -63,6 +63,7 @@ console.log(test())
  */
 const debounce = function(fn, t) {
 
-    return function(...args) {
+    return function (...args) {
         return () => setInterval(() => fn(args), t);
     }
+}
