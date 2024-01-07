@@ -1,0 +1,68 @@
+## 122. Best time to buy and sell stock II
+
+You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
+
+On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.
+
+Find and return the maximum profit you can achieve.
+
+
+
+### Example 1
+
+- Input:
+
+```
+nums = [1,2,3,4,5,6,7], k = 3
+```
+
+- Output:
+
+```shell
+[5,6,7,1,2,3,4]
+```
+
+- Explanation: 
+```shell
+rotate 1 steps to the right: [7,1,2,3,4,5,6]
+rotate 2 steps to the right: [6,7,1,2,3,4,5]
+rotate 3 steps to the right: [5,6,7,1,2,3,4]
+```
+### Example 2
+
+- Input:
+
+```
+ nums = [-1,-100,3,99], k = 2
+
+```
+
+- Output:
+
+```shell
+[3,99,-1,-100]
+
+```
+- Explanation: 
+```shell
+rotate 1 steps to the right: [99,-1,-100,3]
+rotate 2 steps to the right: [3,99,-1,-100]
+```
+
+### Constraints
+- 1 <= nums.length <= 105
+- -231 <= nums[i] <= 2^31 - 1
+- 0 <= k <= 105
+
+
+### Follow up:
+
+- Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
+- Could you do it in-place with O(1) extra space?
+- 
+Notes:
+
+- If >= (Is greater than or equal to) else (<= : is less than or equal to ...);
+- 10^2 = ten squared
+- 10^3 = ten cubed
+- 6^5 = six to the power of five
