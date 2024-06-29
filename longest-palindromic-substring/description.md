@@ -1,6 +1,7 @@
 ## 05. Longest palindromic substring
 
-Given a string s, return the longest palindromic substring in s.
+Given a string s, find the length of the longest
+substring  without repeating characters.
 
 
 ### Example 1
@@ -8,34 +9,49 @@ Given a string s, return the longest palindromic substring in s.
 - Input:
 
 ```
-s = "babad"
+s = "abcabcbb"
 ```
 
 - Output:
 
 ```shell
-bab
+3
 
 ```
-- Explanation: "aba" is also a valid answer.
+- Explanation: The answer is "abc", with the length of 3.
 
 ### Example 2
 
 - Input:
 
 ```
-s = "cbbd"
+s = "bbbbb"
 ```
 
 - Output:
 
 ```shell
-"bb"
+1
+```
+- Explanation:The answer is "b", with the length of 1.
+### Example 3
+
+- Input:
+
+```
+s = "pwwkew"
 ```
 
+- Output:
+
+```shell
+3
+```
+- Explanation:The answer is "wke", with the length of 3.
+  Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 ### Constraints
-- 1 <= s.length <= 1000
-- s consist of only digits and English letters.
+- 0 <= s.length <= 5 * 104
+- s consists of English letters, digits, symbols and spaces.
 
 Notes:
 - If >= (Is greater than or equal to) else (<= : is less than or equal to ...);
