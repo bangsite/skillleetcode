@@ -1,40 +1,36 @@
-const {longestPalindrome, longestPalindrome2} = require('./main');
+const {lengthOfLongestSubstring, lengthOfLongestSubstring2} = require('./main');
 
-describe('longestPalindrome', () => {
-    const s = 'babad', s2 = 'cbbd', s3 = 'a', s4 = 'ac', s5 = 'ccc', s6 = 'aacabdkacaa', s7 = "abcba",
-        s8 = "xaabacxcabaaxcabaax", s9 = "aaabaaaa";
 
-    test('should return the correct longest palindrome substring ', () => {
-        expect(longestPalindrome(s)).toBe('bab');
-        expect(longestPalindrome(s2)).toBe('bb');
-        expect(longestPalindrome(s3)).toBe('a');
-        expect(longestPalindrome(s4)).toBe('a');
-        expect(longestPalindrome(s5)).toBe('ccc');
-        expect(longestPalindrome(s6)).toBe('aca');
-        expect(longestPalindrome(s7)).toBe('abcba');
-        expect(longestPalindrome(s8)).toBe('xaabacxcabaax');
-        expect(longestPalindrome(s9)).toBe('aaabaaa');
+describe('lengthOfLongestSubstring', () => {
+    it('should return the correct length of the longest substring', () => {
+        expect(lengthOfLongestSubstring('abcabcbb')).toBe(3);
+        expect(lengthOfLongestSubstring('bbbbb')).toBe(1);
+        expect(lengthOfLongestSubstring('pwwkew')).toBe(3);
+    });
 
+    it('should handle empty strings', () => {
+        expect(lengthOfLongestSubstring2('')).toBe(0);
+    });
+
+    it('should handle single-character strings', () => {
+        expect(lengthOfLongestSubstring2('a')).toBe(1);
     });
 });
 
 
-describe('longestPalindrome 2', () => {
-    const s = 'babad', s2 = 'cbbd', s3 = 'a', s4 = 'ac', s5 = 'ccc', s6 = 'aacabdkacaa', s7 = "abcba",
-        s8 = "xaabacxcabaaxcabaax", s9 = "aaabaaaa";
+describe('lengthOfLongestSubstring2', () => {
+    it('should return the correct length of the longest substring', () => {
+        expect(lengthOfLongestSubstring2('abcabcbb')).toBe(3);
+        expect(lengthOfLongestSubstring2('bbbbb')).toBe(1);
+        expect(lengthOfLongestSubstring2('pwwkew')).toBe(3);
+    });
 
+    it('should handle empty strings', () => {
+        expect(lengthOfLongestSubstring2('')).toBe(0);
+    });
 
-    test('should return the correct longest palindrome substring ', () => {
-        expect(longestPalindrome2(s)).toBe('bab');
-        expect(longestPalindrome2(s2)).toBe('bb');
-        expect(longestPalindrome2(s3)).toBe('a');
-        expect(longestPalindrome2(s4)).toBe('a');
-        expect(longestPalindrome2(s5)).toBe('ccc');
-        expect(longestPalindrome2(s6)).toBe('aca');
-        expect(longestPalindrome2(s7)).toBe('abcba');
-        expect(longestPalindrome2(s8)).toBe('xaabacxcabaax');
-        expect(longestPalindrome2(s9)).toBe('aaabaaa');
+    it('should handle single-character strings', () => {
+        expect(lengthOfLongestSubstring2('a')).toBe(1);
     });
 });
-
 
