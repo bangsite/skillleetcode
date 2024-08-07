@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "test": "jest  --maxWorkers=50%"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "lib": "file:./lib/"
+  }
+}
