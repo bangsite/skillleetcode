@@ -62,6 +62,10 @@ const uniquePaths3 = function (m, n) {
     return dp[n - 1];
 };
 
+module.exports = {
+    uniquePaths, uniquePaths2, uniquePaths3
+}
+
 const m = 3, n = 7;
 const m2 = 3, n2 = 2;
 const m3 = 3, n3 = 7;
