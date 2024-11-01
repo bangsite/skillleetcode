@@ -1,34 +1,4 @@
 /**
- * @param {character[][]} board
- * @param {string} word
- * @return {boolean}
- */
-
-const exist = function (board, word) {
-    let result = '';
-    let posRow = 0;
-    let posCol = 0;
-    let counter = 0;
-
-    for (let row = posRow; row < board.length; row++) {
-        for (let col = posCol; col < board[row].length; col++) {
-            if (board[row][col] === word[counter]) {
-                result += word[counter];
-                counter++;
-
-            } else if (board[row][col - 2] === word[counter]) {
-                result += word[counter];
-            } else {
-                posCol = col - 1;
-                posRow = row + 1;
-            }
-        }
-    }
-    console.log(result)
-    return result === word;
-};
-
-/**
  *
  * @param board
  * @param word
