@@ -46,7 +46,9 @@ const hammingWeight3 = function (n) {
 };
 
 module.exports = {
-    hammingWeight
+    hammingWeight,
+    hammingWeight2,
+    hammingWeight3
 }
 
 const n = 11, n2 = 128, n3 = 2147483645;
