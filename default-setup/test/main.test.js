@@ -1,4 +1,4 @@
-const {functionName} = require('./main');
+const { functionName } = require('../main');
 
 // Setup data;
 const data = [];
